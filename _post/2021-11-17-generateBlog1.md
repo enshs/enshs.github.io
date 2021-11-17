@@ -12,22 +12,20 @@ last_modified-at:2021-11-17
 
 # jekyll blog 생성 
 
-[참조](https://jinhoooooou.github.io/making-blog/making-blog-3/)
-
 1. 새로운 폴더에 블로그 생성 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog$ jekyll new HelloBlog
+(base) ~~~/Jekyll_Blog$ jekyll new HelloBlog
 ```
 대상 폴더에 웹사이트가 생성되었습니다. 
 
 2. 그 디렉토리에서 명령 ``bundle exec jekyll serve``으로 웹사이트 호스팅합니다. 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog$ cd HelloBlog
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog$ bundle exec jekyll serve
+(base) ~~:~/Jekyll_Blog$ cd HelloBlog
+(base) ~~:~/Jekyll_Blog/HelloBlog$ bundle exec jekyll serve
 ```
 브라우저에 http://127.0.0.1:4000/ 을 입력하면 기본 화면이 출력됩니다. 
 
-![기본화면](./image/jekyll기본화면.png)
+![기본화면](https://github.com/enshs/enshs.github.io/blob/master/image/jekyll%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.png)
 
 ## jekyll  theme  선택 
 
@@ -44,7 +42,7 @@ last_modified-at:2021-11-17
 minimal-mistakes repo를 clone하여 가져오기 
 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog$ git clone https://github.com/mmistakes/minimal-mistakes.git
+(base) ~~:~/Jekyll_Blog/HelloBlog$ git clone https://github.com/mmistakes/minimal-mistakes.git
 ```
 <span style="color:blue"> 'minimal-mistakes'에 복제합니다...<br/>
      remote: Enumerating objects: 18691, done.<br/>
@@ -54,14 +52,14 @@ minimal-mistakes repo를 clone하여 가져오기
 
 2. clone으로 소스다운후 해당 폴더에서 bundle 명령 수행으로 gemfile을 검사하고 필요한 목록을 설치합니다. 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog$ cd minimal-mistakes
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog/minimal-mistakes$ bundle 
+(base) ~~:~/Jekyll_Blog/HelloBlog$ cd minimal-mistakes
+(base) ~~:~/Jekyll_Blog/HelloBlog/minimal-mistakes$ bundle 
 ```
 <span style="color:blue">Fetching gem metadata from https://rubygems.org/..........</span>
 
 3. 설치후 웹호스팅합니다. (이전의 항목 2 참조) 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog/minimal-mistakes$ bundle exec jekyll serve
+(base) ~~:~/Jekyll_Blog/HelloBlog/minimal-mistakes$ bundle exec jekyll serve
 ```
 <span style="color:blue"> Configuration file: /home/son/Jekyll_Blog/HelloBlog/minimal-mistakes/_config.yml
             Source: /home/son/Jekyll_Blog/HelloBlog/minimal-mistakes
@@ -74,22 +72,22 @@ minimal-mistakes repo를 clone하여 가져오기
     Server address: http://127.0.0.1:4000
   Server running... press ctrl-c to stop.</span>
 
-![기본화면2](./image/jekyll기본화면2.png)
+![기본화면2](https://github.com/enshs/enshs.github.io/blob/master/image/jekyll%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B42.png)
 
 4. 3에서 생성한 웹호스팅은 로컬 서버에서만 사용할 수 있습니다. github에서 사용할 수 있도록 합니다. 이를 위해 github에 존재하는 repository와 연결합니다. 이 저장소의 이름은 enshs.github.io이므로 minimal-mistakes의 폴더명을 enshs.github.io로 변경합니다. 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog$ mv minimal-mistakes enshs.github.io
+(base) ~~:~/Jekyll_Blog/HelloBlog$ mv minimal-mistakes enshs.github.io
 ```
 그 폴더로 이동하여 로컬의 폴더와 github의 저장소 enshs.github.io와 연결합니다. 
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git remote -v
+(base) ~~:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git remote -v
 ```
 <span style="color:blue">origin	https://github.com/mmistakes/minimal-mistakes.git (fetch)<br/>
 origin	https://github.com/mmistakes/minimal-mistakes.git (push)</span>
 ```
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git remote remove origin
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git remote add origin https://github.com/enshs/enshs.github.io
-(base) son@son-HP-ENVY-Notebook-15-PC:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git push -u origin master
+(base) ~~:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git remote remove origin
+(base) ~~C:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git remote add origin https://github.com/enshs/enshs.github.io
+(base) ~~:~/Jekyll_Blog/HelloBlog/enshs.github.io$ git push -u origin master
 Username for 'https://github.com': enshs
 Password for 'https://enshs@github.com':
 ```
@@ -107,7 +105,7 @@ remote: Resolving deltas: 100% (10001/10001), done.</span>
 
 $$\text{설정} \rightarrow \text{개발자 설정} \rightarrow \text{Personal acess tokens}$$
 
-![개인용토큰1](./image/github_setting1.png)
+![개인용토큰1](https://github.com/enshs/enshs.github.io/blob/master/image/github_setting1.png)
 
 
 
