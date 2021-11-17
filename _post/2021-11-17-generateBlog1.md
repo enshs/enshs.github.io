@@ -1,5 +1,6 @@
 ---
-title: ((GIthub page 블러그 만들기))
+layout: single
+title: "GIthub page 블러그 만들기"
 
 categorires:
 - blog
@@ -7,7 +8,8 @@ tags:
 - blog
 - github page
 -jetkll
-last_modified-at:2021-11-17
+use_math: true
+comments: ture
 ---
 
 # jekyll blog 생성 
