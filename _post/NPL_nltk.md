@@ -21,7 +21,7 @@ Five main Component of Natural Language processing in AI are:
 - Discourse Integration (담론 통합)
 - Pragmatic Analysis (실용적인 분석)
 
-![NLP 흐름도](./image/nlpFlow.png)
+![NLPFlow](./image/nlpFlow.png)
 
 ### 형태 및 어휘 분석 
 어휘 분석은 단어와 표현을 포함하는 어휘입니다. 그것은 단어 구조의 분석, 식별 및 설명을 묘사합니다. 그것은 텍스트를 단락, 단어 및 문장으로 나누는 것을 포함합니다. 
