@@ -4,9 +4,7 @@ title: "RNN 소개"
 categories:
   - Deep Learning
 tags:
-  - NLP
-  - nltk
-  - python
+  - RNN
 use_math: true
 comments: true
 ---
