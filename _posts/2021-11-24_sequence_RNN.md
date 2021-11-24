@@ -138,7 +138,7 @@ plt.show()
 
 
     
-![png](sequenceData_RNN_files/sequenceData_RNN_5_0.png)
+![png](./image/sequence_RNN1.png)
     
 
 
@@ -749,7 +749,7 @@ print(f'week의 고유 수: {time1.week.unique()}')
 
 위 결과 month의 고유값은 1~12로서 이 범위를 주기로 순환한다는 것을 의미합니다. 이러한 주기성은 각 고유값을 단위원에 대응시켜 다음과 같이 나타낼 수 있습니다. 
 
-![cycle](./image/yr_cycle.png)
+![cycle](../image/sequence_RNN2.png)
 
 위 그림의 주기성은 sin(x), cox(x)로 표현할 수 있습니다. 즉, 이 특성들은 다음과 같이 새로운 값들로 변환할 수 있습니다. 
 
@@ -2103,11 +2103,11 @@ input, h_0, output, h_n의 detail
 
 각 연산을 차원을 위주로 나타내면 다음과 같습니다. 
 
-![rnn structure](./image/rnn_structure.png)
+![rnn structure](./image/sequence_RNN3.png)
 
 입력의 feature 수가 d개이고 은닉층이 D<sub>h</sub>이면 입력에 대한 가중치는 D<sub>h</sub> &times; d가 되며 은닉층의 가중치는 D<sub>h</sub> &times; D<sub>h</sub>가 됩니다. 그러므로 은닉층의 계산에 따른 차원은 다음과 같습니다. 
 
-![hidden state](./image/hidden_state.png)
+![hidden state](./image/sequence_RNN4.png)
 <br><br>
 <center><b>h<sub>t</sub> =tanh(W<sub>x</sub>X<sub>t</sub> + W<sub>h</sub>h<sub>t-1</sub>+b)</b></center>
 <br><br>
