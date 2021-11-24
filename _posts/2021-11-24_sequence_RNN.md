@@ -9,9 +9,6 @@
 - 원-핫 인코딩, 지연 및 순환 시간 특성과 같이 시계열 예측에 널리 적용되는 특성 엔지니어링 기술 중 일부를 제공합니다. 
 - Scikit-learn, Pandas 및 PyTorch를 사용
 
-!pip -q install finance-datareader
-
-
 ```python
 import FinanceDataReader as fdr
 import numpy as np
@@ -749,7 +746,7 @@ print(f'week의 고유 수: {time1.week.unique()}')
 
 위 결과 month의 고유값은 1~12로서 이 범위를 주기로 순환한다는 것을 의미합니다. 이러한 주기성은 각 고유값을 단위원에 대응시켜 다음과 같이 나타낼 수 있습니다. 
 
-![cycle](../image/sequence_RNN2.png)
+![cycle](./image/sequence_RNN2.png)
 
 위 그림의 주기성은 sin(x), cox(x)로 표현할 수 있습니다. 즉, 이 특성들은 다음과 같이 새로운 값들로 변환할 수 있습니다. 
 
