@@ -4,7 +4,7 @@ title: "Time series analysis with LSTM"
 categories:
   - Deep Learning
 tags:
-  - lstm
+  - sequence
   - rnn
   - python
   - sotck
