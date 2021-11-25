@@ -1,3 +1,17 @@
+---
+layout: single
+title: "Time series analysis with LSTM"
+categories:
+  - Deep Learning
+tags:
+  - lstm
+  - rnn
+  - python
+  - sotck
+use_math: true
+comments: true
+---
+
 # 시계열 분석
 [참조](https://towardsdatascience.com/building-rnn-lstm-and-gru-for-time-series-using-pytorch-a46e5b094e7b)
 
