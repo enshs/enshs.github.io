@@ -1207,7 +1207,7 @@ plt.show()
 
 
     
-![png](.\image\desStat01.png)
+![png01](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/desStat01.png)
     
 
 
@@ -1249,7 +1249,7 @@ plt.show()
 
 
     
-![png](.\image\desStat02.png)
+![png02](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/desStat02.png)
     
 
 
@@ -1403,7 +1403,7 @@ plt.show()
 
 
     
-![png](.\image\desStat03.png)
+![png03](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/desStat03.png)
     
 
 
@@ -1467,7 +1467,7 @@ plt.show()
 
 
     
-![png](.\image\desStat04.png)
+![png04](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/desStat04.png)
     
 
 
@@ -1638,7 +1638,7 @@ plt.show()
 
 
     
-![png](.\image\desStat05.png)
+![png05](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/desStat05.png)
     
 
 
