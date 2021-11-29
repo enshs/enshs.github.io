@@ -536,7 +536,7 @@ plt.show()
 
 
     
-![png](prob_permu_combi01.png)
+![png](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/prob_permu_combi01.png?raw=true)
     
 
 
