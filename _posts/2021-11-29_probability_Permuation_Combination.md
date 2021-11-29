@@ -2,10 +2,9 @@
 layout: single
 title: "Probability, Permuation and Combination"
 categories:
-  - Deep Learning
+  - statistics
 tags:
-  - NLP
-  - nltk
+  - probability
   - python
 use_math: true
 comments: true
