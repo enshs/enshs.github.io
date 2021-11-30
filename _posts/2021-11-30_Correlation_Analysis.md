@@ -16,7 +16,8 @@ If it is a continuous variable, you cannot create a cross tabulation that is sub
 
 Use a scatterplot to visually represent the correlation between the two variables. Figure 1(a) shows a clear direct proportion between y<sub>1</sub> and y<sub>2</sub>. On the other hand, (c) shows an inverse relationship, but (b) cannot specify any proportional relationship between y<sub>1</sub> and y<sub>2</sub>. These relationships can be quantitatively represented using statistics called correlation coefficients, which relate to covariance of two variables and their respective standard deviations.
 
-![Figure 1](./correlation1.png)
+![Figure 1](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/corrAnal01.png?raw=true)
+
 Figure 1. (a) normal relationship (b) unrelated relationship (c) inverse relationship of the two variables.
 
 Figure 1(a) measures each deviation of y<sub>1</sub>-&mu;<sub>1</sub>, y<sub>2</sub>-&mu;<sub>2</sub> between the means of each variable and any point $y_1 and y_2$. In this case, an increase of $y_2$ with an increase of $y_1$ is observed, so the product (y<sub>1</sub>-&mu;<sub>1</sub>)(y<sub>2</sub>-&mu;<sub>2</sub>) of the two deviations will increase more than each and be positive. If the same process is applied to figure (c), the product of the two deviations will be negative. In Figure (b), you cannot specify the product sign of the two deviations. As a result,(y<sub>1</sub>-&mu;<sub>1</sub>)(y<sub>2</sub>-&mu;<sub>2</sub>) is an indicator of linear dependence of two variables y<sub>1</sub> and y<sub>2</sub> and the expected value of this deviation product E[(y<sub>1</sub>-&mu;<sub>1</sub>)(y<sub>1</sub>-&mu;<sub>1</sub>)] is called **covariance** (Equation 1).
@@ -100,19 +101,6 @@ y.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -162,7 +150,7 @@ plt.show()
 
 
     
-![png](output_6_0.png)
+![png](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/corrAnal02.png?raw=true)
     
 
 
@@ -230,19 +218,6 @@ y.cov(ddof=0)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -280,19 +255,6 @@ covMat
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -361,19 +323,6 @@ creCoef
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -410,19 +359,6 @@ y.corr()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -488,7 +424,7 @@ plt.show()
 
 
     
-![png](output_22_1.png)
+![png](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/corrAnal03.png?raw=true)
     
 
 
