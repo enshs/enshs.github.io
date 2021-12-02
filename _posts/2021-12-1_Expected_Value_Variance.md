@@ -2,17 +2,17 @@
 layout: single
 title: "Expected Value and Variance"
 categories:
-  - Statistics
+- Statistics
 tags:
-  - Probability
-  - expected_value
-  - variance
-  - python
+- Probability
+- expected_value
+- variance
+- python
 use_math: true
 comments: true
 ---
 
-## Expected Value
+# Expected Value
 A quantitative indicator for mathematically describing the characteristics and shape of random variables and probability distributions is called **moment**. <br><br>
 $$\begin{aligned}&\text{nth order moment }= E(x^n)\\
 	&n= 1, 2, \cdots \end{aligned}$$
