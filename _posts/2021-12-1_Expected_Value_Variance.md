@@ -1,24 +1,23 @@
 ---
 layout: single
-title: "Probability and Expected Value"
+title: "Expected Value and Variance"
 categories:
   - Statistics
 tags:
   - Probability
   - expected_value
+  - variance
   - python
 use_math: true
 comments: true
 ---
 
-## Probability and Expected Value
+## Expected Value
 A quantitative indicator for mathematically describing the characteristics and shape of random variables and probability distributions is called **moment**. <br><br>
 $$\begin{aligned}&\text{nth order moment }= E(x^n)\\
 	&n= 1, 2, \cdots \end{aligned}$$
 
 Moments are used to derive various statistics such as skewness and kurtosis along with mean and variance introduced in descriptive statistics. 
-
-### Expected value
 
 The mean is the most commonly used statistic to characterize variables. This statistic is calculated as the product of the frequency and probability for each variable value and is called **expected value**(E(X)). 
 
@@ -928,19 +927,6 @@ go1.head(3)
 
 
 <div>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>diff</th>
-      <th>Cat</th>
-    </tr>
-    <tr>
-      <th>Date</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <th>2020-03-02</th>
@@ -1252,3 +1238,308 @@ Rational(EY, 7)
 $\displaystyle \frac{26}{7}$
 
 
+## Variance
+
+As introduced in descriptive statistics, **variance** represents data variability and is calculated as Equation 6, and the square root of the variance becomes the standard deviation (&sigma;). <br><br>
+
+$$\begin{equation}\tag{6}
+\begin{aligned}\sigma^2&=E(X-\mu)^2\\&=(x_1-\mu)^2P(X=x_1)+ \cdots+(x_k-\mu)^2P(X=x_k)\\&=\sum^k_{i=1} (x_k-\mu)^2P(X=x_k)
+\end{aligned} \end{equation}$$
+
+Variance, a measure of the spread of a data distribution, is the weighted average of the squared deviations between each data and the mean. Equation 1 is simplified to: <br><br>
+
+$$\begin{aligned}&\begin{aligned}\sigma^2&=\sum (x-\mu)^2P(X=x)\\&=\sum(x^2-2x\mu+\mu^2)f(x)\\&=\sum x^2f(x) -2\mu \sum xf(x)+ \mu^2\\&=\sum x^2f(x)-\mu^2\\&=E(X^2)-(E(X))^2 \end{aligned}\\ & \because \sum xf(x)=\mu \end{aligned}$$
+
+As in the above expression, the calculation of variance consists of the expected value of the square of the variable and the square of the mean. The expected value of that variable squared is called the second moment. In other words, the expected value according to the degree of a variable is expressed as a moment for that degree. Therefore, the variance is calculated as the difference between the square of the second moment and the first moment, and since they are all expected values, a linear combination as in Equation 7 is established. <br><br>
+
+$$\begin{equation}\tag{7}
+	\begin{aligned}
+	Var(aX+b)&=\sigma^2_{ax+b}\\&=E[((aX+b)-\mu_{aX+b})^2]\\ &=E[((aX+b)-E(aX+b))^2]\\&=E[((aX+b)-aE(X)+b)^2]\\&=E[(a(X-\mu))^2]\\&=a^2E[(x-\mu)^2]\\&=a^2\sigma^2_X
+\end{aligned}
+\end{equation}$$
+
+A constant added to a variable as in Equation 7 does not affect the variance of that variable.  
+
+<span style="color:blue;"><b>Example 11)</b></span><br>
+&emsp; The probability mass function of the random variable X is: 
+	$$f(x)=\frac{x}{8}, \quad x=1,2,5$$.
+	Determine E(X) and Var(X). 
+
+
+```python
+x=np.array([1,2,5])
+f=x/8
+f
+```
+
+
+
+
+    array([0.125, 0.25 , 0.625])
+
+
+
+
+```python
+Ex=np.sum(x*f)
+Ex
+```
+
+
+
+
+    3.75
+
+
+
+
+```python
+Var=np.sum(x**2*f)-Ex**2
+Var
+```
+
+
+
+
+    2.6875
+
+
+
+<span style="color:blue;"><b>Example 12)</b></span><br>
+&emsp;The probability density function of a continuous random variable X is:
+	$$f(x)=\frac{x+1}{8}, \quad 2 < x < 4$$
+	Determine E(X) and Var(X). 
+
+The mean and variance are calculated using the integral of the PDF function. The integral operation applies the ``itegrate()`` function of the sympy module. 
+
+
+```python
+x=symbols("x")
+f=(x+1)/8
+Ex=integrate(x*f, (x, 2, 4))
+Ex
+```
+
+
+
+
+$\displaystyle \frac{37}{12}$
+
+
+
+
+```python
+Var=integrate(x**2*f,(x, 2, 4))-Ex**2
+Var
+```
+
+
+
+
+$\displaystyle \frac{47}{144}$
+
+
+
+<span style="color:blue;"><b>Example 13)</b></span><br>
+&emsp;Calculate the variance of a random variable X with the probability density function<br>
+ 
+$$f(x)=\begin{cases} 1-|x|& \quad |x|<1\\0& \quad \text{otherwise}  \end{cases}$$
+
+
+```python
+x=symbols("x")
+f=1-abs(x)
+Ex=integrate(x*f, (x, -1,1))
+Ex
+```
+
+
+
+
+$\displaystyle 0$
+
+
+
+
+```python
+Var=integrate(x**2*f,(x, -1,1))-Ex**2
+Var
+```
+
+
+
+
+$\displaystyle \frac{1}{6}$
+
+
+
+<span style="color:blue;"><b>Example 14)</b></span><br>
+&emsp; Two types of games are played based on the rule that one die is rolled and points are scored according to the eye.
+
+|Point|	1|	2|	3|	4|	5|	6|
+|:---:|	:---:|	:---:|	:---:|:---:|	:---:|:---:|		
+|Game 1(x)|	1|	2|	3|	4|	5|	6|
+|Game 2(y)|	3|	0	|6|	0|	0|	12|
+|P(X or Y)|	$\displaystyle \frac{1}{6}$|	$\displaystyle \frac{1}{6}$|	$\displaystyle \frac{1}{6}$|	$\displaystyle \frac{1}{6}$	|$\displaystyle \frac{1}{6}$|	$\displaystyle \frac{1}{6}$|
+
+Determine the expected value and variance for each game.
+
+
+```python
+game=pd.DataFrame([np.arange(1, 7), np.arange(1, 7),[3,0,6,0,0,12],
+                   np.repeat(Rational(1,6), 6)],
+                  index=["Dice Eye","game1(x)", "game2(Y)", "P(X or Y)"])
+X=game.iloc[1,:]
+Y=game.iloc[2,:]
+EX=(X*game.iloc[3,:]).sum()
+EX
+```
+
+
+
+
+$\displaystyle \frac{7}{2}$
+
+
+
+
+```python
+VarX=(X**2*game.iloc[3,:]).sum()-EX**2
+VarX
+```
+
+
+
+
+$\displaystyle \frac{35}{12}$
+
+
+
+
+```python
+#game2
+EY=(Y*game.iloc[3,:]).sum()
+EY
+```
+
+
+
+
+$\displaystyle \frac{7}{2}$
+
+
+
+
+```python
+VarY=(Y**2*game.iloc[3,:]).sum()-EY**2
+VarY
+```
+
+
+
+
+$\displaystyle \frac{77}{4}$
+
+
+
+Combine the two dice games in this example to create a new random variable Z and calculate the mean and variance of the probability distribution. 
+<center>Z=X+Y</center>
+
+
+```python
+X=game.iloc[1,:]
+Y=game.iloc[2,:]
+Z=X+Y
+Z
+```
+
+
+
+
+    0     4
+    1     2
+    2     9
+    3     4
+    4     5
+    5    18
+    dtype: object
+
+
+
+
+```python
+EZ=np.sum(Z*game.iloc[3,:])
+EZ
+```
+
+
+
+
+$\displaystyle 7$
+
+
+
+
+```python
+EX+EY
+```
+
+
+
+
+$\displaystyle 7$
+
+
+
+As shown in the above result, the expected value of the combined variable is equal to the sum of each expected value. However, the variance of the combined variables is not equal to the sum of the variances of each variable. The variance can be calculated by DataFrame ``object.var()``. 
+
+
+```python
+VarZ=np.sum(Z**2*game.iloc[3,:])-EZ**2
+VarZ
+```
+
+
+
+
+$\displaystyle \frac{86}{3}$
+
+
+
+
+```python
+np.var(Z)
+```
+
+
+
+
+    28.666666666666668
+
+
+
+
+```python
+VarX+VarY
+```
+
+
+
+
+$\displaystyle \frac{133}{6}$
+
+
+
+As the above results show, the variance of the combined variables and the sum of the variances of each variable do not match. This difference can be explained by the process of inducing the variance of the binding variable as shown in Equation 8. <br><br>
+
+$$\begin{equation}\tag{8}
+	\begin{aligned}
+&Var[aX+bY]\\&=E[((aX+bY)-(a\mu_X+b\mu_Y)^2)]\\&=E[(a(X-\mu_X)+b(Y-\mu_Y))^2)]\\
+&=E[a^2(X-\mu_X)^2+2ab(X-\mu_X)(Y-\mu_Y)+b^2(Y-\mu_Y)] \\
+&=a^2E[(X-\mu_X)^2]+2abE[(X-\mu_X)(Y-\mu_Y)]+b^2E[(Y-\mu_Y)] \\
+&=a^2Var(X)+b^2Var(Y)\\
+& \because \;  E[(X-\mu_x)(Y-\mu_Y)]=0
+	\end{aligned}
+\end{equation}$$
+
+In Equation 8, E[(X-&mu;<sub>x</sub>)(Y-&mu;<sub>Y</sub>)] denotes the interaction of two variables. If the two variables are independent, the value of that interaction is zero. Therefore, the difference in variance between the variables X and Y in the example and the associated variable Z provides information that the two variables are not independent. 
