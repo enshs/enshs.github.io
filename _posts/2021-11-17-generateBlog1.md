@@ -27,7 +27,7 @@ comments: ture
 ```
 브라우저에 http://127.0.0.1:4000/ 을 입력하면 기본 화면이 출력됩니다. 
 
-![기본화면](https://github.com/enshs/enshs.github.io/blob/master/image/jekyll%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.png)
+![기본화면](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/jekyll%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B4.png)
 
 ## jekyll  theme  선택 
 
@@ -74,7 +74,7 @@ minimal-mistakes repo를 clone하여 가져오기
     Server address: http://127.0.0.1:4000
   Server running... press ctrl-c to stop.</span>
 
-![기본화면2](https://github.com/enshs/enshs.github.io/blob/master/image/jekyll%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B42.png)
+![기본화면2](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/jekyll%EA%B8%B0%EB%B3%B8%ED%99%94%EB%A9%B42.png)
 
 4. 3에서 생성한 웹호스팅은 로컬 서버에서만 사용할 수 있습니다. github에서 사용할 수 있도록 합니다. 이를 위해 github에 존재하는 repository와 연결합니다. 이 저장소의 이름은 enshs.github.io이므로 minimal-mistakes의 폴더명을 enshs.github.io로 변경합니다. 
 ```
@@ -107,7 +107,7 @@ remote: Resolving deltas: 100% (10001/10001), done.</span>
 
 $$\text{설정} \rightarrow \text{개발자 설정} \rightarrow \text{Personal acess tokens}$$
 
-![개인용토큰1](https://github.com/enshs/enshs.github.io/blob/master/image/github_setting1.png)
+![개인용토큰1](https://github.com/enshs/enshs.github.io/blob/master/_posts/image/github_setting1.png)
 
 
 
